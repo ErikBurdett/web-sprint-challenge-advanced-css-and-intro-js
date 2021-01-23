@@ -208,16 +208,23 @@ Practice accessing data above by console.log-ing following items:
 (no functions needed) */
 
 //(1) Name of the first artist (0th index) in the array
-
+let firstArtist = [...artists];
+console.log(`the artist at index 0 is ${firstArtist[0].name}`);
+// working in codepen
 
 //(2) Bio of the third artist (2nd index) in the array 
-
+let thirdArtist = [...artists];
+console.log(`the artist at index 2 is ${thirdArtist[2].bio}`);
+// working in codepen https://codepen.io/eaburdett/pen/RwGmgOX
 
 
 /* 🚀🚀🚀🚀🚀🚀🚀🚀🚀🚀 Task 2: 🚀🚀🚀🚀🚀🚀🚀🚀🚀🚀 
 (no function needed) 
 There is a typo in your dataset 😱 The 9th artist, Vincent Van Gogh is currently Vincent Van Dough. Use an array method to fix this issue and console.log() to check your work. */
-
+let vanGogh = [...artists];
+vanGogh[8].name = "Vincent Van Gogh"
+console.log(vanGogh[8].name);
+// Got this to work in code pen just fine?
 
 
 /* 🚀🚀🚀🚀🚀🚀🚀🚀🚀🚀 Task 3: 🚀🚀🚀🚀🚀🚀🚀🚀🚀🚀  
@@ -228,10 +235,11 @@ There is a typo in your dataset 😱 The 9th artist, Vincent Van Gogh is current
  
  Example, if getArtistByIndex is invoked with the artists array and the number 0, it will return `the artist at index 0 is Amedeo Modigliani` */
 
-function getArtistByIndex(/*Your Code Here*/) {
+function getArtistByIndex(array, number) {
+  return (`the artist at index 0 is ${array[number].name}`);
   /*Your Code Here*/
 }  
-
+console.log(getArtistByIndex(artists, 0));
 
 
 /* 🚀🚀🚀🚀🚀🚀🚀🚀🚀🚀 Task 4: 🚀🚀🚀🚀🚀🚀🚀🚀🚀🚀 
@@ -242,10 +250,22 @@ Use get20s to do the following:
 Example born in 1901 and died in 1959 - included -- born in 1889 and died in 1925 not included
 If correct, the function should return ["Salvador Dali", "Frida Kahlo"]*/
 
-function get20s(/*Your Code Here*/){
+function get20s(array){
+  let newArray = [...array];
+  let newerArray = newArray.splice(5,17);
+  console.log(newerArray[0].name);
+  console.log(newerArray[12].name);
+  let newestArray = newerArray.slice(0,12);
+  return console.log(newestArray);
+  
+
+  
+  
+  
   /*Your Code Here*/
 }
-
+get20s(artists);
+// Having trouble getting both indexes into one single index. 
 
 
 /* 🚀🚀🚀🚀🚀🚀🚀🚀🚀🚀 Task 5: 🚀🚀🚀🚀🚀🚀🚀🚀🚀🚀 
@@ -257,9 +277,17 @@ function get20s(/*Your Code Here*/){
  
  For example, if removeArtist is invoked with the artists array and the number 0, it will remove Amedeo Modigliani from our dataset and return the number 19. */
 
-function removeArtist(/*Your Code Here*/){
+ function removeArtist(array, number){
+  let newArray = array;
+  console.log(array[number].name);
+  newArray.pop(number);
+  
+  return newArray.length;
    /*Your Code Here*/
 }
+console.log(removeArtist(artists, 0));
+// working in code pen ??? https://codepen.io/eaburdett/pen/NWRVvVY?editors=0012
+
    
 
 /* 🚀🚀🚀🚀🚀🚀🚀🚀🚀🚀 Task 6: 🚀🚀🚀🚀🚀🚀🚀🚀🚀🚀 
@@ -278,9 +306,23 @@ Use addArtist to do the following:
 
 Example: addArtist(artists) should return the artists array with the above object added to the end of the array. */
 
-function addArtist(/*Your Code Here*/){
+function addArtist(array){
+  let newArray = array;
+  let artistObj = { 
+    "id": 20,
+    "name": "Telephone Heater", 
+    "years": "11-28-1994 - present",
+    "genre": "Media Production", 
+    "nationality": "Free Radical",
+    "bio": "Erik Burdett is Telephone Heater"
+  }
+  newArray.push(artistObj);
+  return newArray;
+  
+
     /*Your Code Here*/
   }
+console.log(addArtist(artists))
 
   
 
@@ -291,9 +333,15 @@ Use lotsOfArt to do the following:
 
 For example lotsOfArt(artists); will return ["Amedeo Modigliani", "Rene Magritte", ... "Albrecht Dürer"]*/
 
-function lotsOfArt(/*Your Code Here*/){
-  /*Your Code Here*/
+function lotsOfArt(array){
+  for(let i = 0; i >= array.paintings; i++){
+    if(array >= 100){
+      let newArray = array.push(i,1); 
+      return newArray;
+  }
 }
+}
+console.log(lotsOfArt(artists));
 
 
 

@@ -23,9 +23,13 @@ Commit your code regularly and meaningfully. This helps both you (in case you ev
 Be prepared to demonstrate your understanding of this week's concepts by answering questions on the following topics. You might prepare by writing down your own answers before hand.
 
 1. How would you describe acessibility on the web to someone new to programming?
+Making sure that anyone, regardless of ability or disability, can find information in a convienent manner.
 2. Talk about 3 different things you can do to ensure your website is accessible. 
+Use viewports for mobile, scalable units such as % & rem, stay away from colors that are difficult for the colorblind, organize html for screen readers
 3. How would you explain the concept of a variable to someone new to programming?
+A variable is like a container for some kind of data. Like a jar of jam, or something similar.
 4. What is the purpose of using functions in code?
+to be able to reuse code without messying the program with unnessecary repeated lines of code.
 
 You are expected to be able to answer questions in these areas. Your responses contribute to your Sprint Challenge grade. 
 
@@ -47,8 +51,8 @@ NOTE: Tests will run for the JavaScript portion of this challenge only
 
 *Before you jump in, take 10 minutes to review the code that has already been provided for you. Take time to see how the home page was built. During this time, [Review the provided design files](design/). You have been provided all content necessary in the [index.html file](index.html) and basic styling in the [index.css file](css/index.css).*
 
-* [ ] Add a viewport meta tag to the head of your index.html page.
-* [ ] Add responsive breakpoints to your code for 500px such that your styles match the [mobile design file](design/Mobile.png).
+* [x ] Add a viewport meta tag to the head of your index.html page.
+* [ x -mostly ] Add responsive breakpoints to your code for 500px such that your styles match the [mobile design file](design/Mobile.png). (on a time crunch!)
 
 ### Task 2b: Minimum Viable Product - JavaScript
 
