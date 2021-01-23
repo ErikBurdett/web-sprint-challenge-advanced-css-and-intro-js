@@ -257,7 +257,7 @@ function get20s(array){
   console.log(newerArray[12].name);
   let newestArray = newerArray.slice(0,12);
   return console.log(newestArray);
-  
+  //commment
 
   // comment
   
