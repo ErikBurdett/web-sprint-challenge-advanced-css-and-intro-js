@@ -259,7 +259,7 @@ function get20s(array){
   return console.log(newestArray);
   
 
-  
+  // comment
   
   
   /*Your Code Here*/
