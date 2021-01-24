@@ -250,21 +250,27 @@ Use get20s to do the following:
 Example born in 1901 and died in 1959 - included -- born in 1889 and died in 1925 not included
 If correct, the function should return ["Salvador Dali", "Frida Kahlo"]*/
 
-function get20s(array){
-  let newArray = [...array];
-  let newerArray = newArray.splice(5,17);
-  console.log(newerArray[0].name);
-  console.log(newerArray[12].name);
-  let newestArray = newerArray.slice(0,12);
-  return console.log(newestArray);
-  //commment
 
-  // comment
-  
-  
-  /*Your Code Here*/
+function get20s(array){
+  let newArray = [];
+  for(let i = 0; i < array.length; i++){
+    if(array[i].years >= "1904 - 1989" && "1907 - 1954"){
+      newArray.push(array[i].name);
+      
+      
+
+      
+    }
+    
 }
+return newArray;
+}
+
 get20s(artists);
+
+
+
+
 // Having trouble getting both indexes into one single index. 
 
 
