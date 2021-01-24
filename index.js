@@ -256,7 +256,7 @@ function get20s(array){
   for(let i = 0; i < array.length; i++){
     if(array[i].years >= "1904 - 1989" && "1907 - 1954"){
       newArray.push(array[i].name);
-      
+
       
 
       
@@ -340,14 +340,15 @@ Use lotsOfArt to do the following:
 For example lotsOfArt(artists); will return ["Amedeo Modigliani", "Rene Magritte", ... "Albrecht Dürer"]*/
 
 function lotsOfArt(array){
-  for(let i = 0; i >= array.paintings; i++){
-    if(array >= 100){
-      let newArray = array.push(i,1); 
-      return newArray;
-  }
+  let newArray = [];
+for(let i = 0; i < array.length; i++){
+  if(array[i].paintings >= 100){
+    newArray.push(array[i].name);
+    }
 }
+return newArray;
 }
-console.log(lotsOfArt(artists));
+lotsOfArt(artists);
 
 
 
@@ -384,11 +385,23 @@ function getHTML(/* Code here */){
 /* 💪💪💪💪💪💪 STRETCH 2: 💪💪💪💪💪💪
 Create a function called `randomize` that takes a data array as an argument and returns a the same array in a randomized order. */
 
-function randomize(/* Code here */){
-
-    /* Code here */
-
+function randomize(array){
+  let currentIndex = array.length, tempVal, randomIndex;
+  // while there remains elements to shuffle...
+  while ( 0 !== currentIndex){
+    // pick a remaining element...
+    randomIndex = Math.floor(Math.random() * currentIndex);
+    currentIndex -= 1;
+    // And swap it with the current element
+    tempVal = array[currentIndex];
+    array[currentIndex] = array[randomIndex];
+    array[randomIndex] = tempVal;
   }
+return array; 
+  /* Code here */
+
+}
+randomize(artists);
 
 
  /* 💪💪💪💪💪💪 STRETCH 3: 💪💪💪💪💪💪
